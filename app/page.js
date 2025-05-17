@@ -1,26 +1,25 @@
 import React from "react";
 import Sidebar from "@/components/Sidebar";
 import Aboutme from "@/components/Aboutme";
-import Skills from "@/components/Skills";
+import Skill from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
-import Languages from "@/components/Languages";
-import Projects from "@/components/Projects";
+import Projects from "@/components/Skill";
 import Call from "@/components/Call";
 import Courses from "@/components/Courses";
+// import Test from "@/components/Test";
 
 function page() {
   return (
     <div>
-      <Sidebar />
+      {/* <Test /> */}
+
       <Aboutme />
-      <Skills />
-      <Experience />
-      <Education />
-      <Languages />
+      <Skill />
       <Projects />
       <Courses />
-      <Call />
+      <Experience />
+      <Education />
     </div>
   );
 }

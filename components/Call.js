@@ -32,7 +32,7 @@ const ContactForm = () => {
       </div>
       <div
         dir="rtl"
-        className="w-full max-w-md mb-0 md:max-w-5xl lg:max-w-3xl mx-auto p-6 md:p-8 bg-white rounded-lg shadow-lg"
+        className="w-full max-w-md mb-0 md:max-w-5xl lg:max-w-2xl mx-auto  md:p-8 rounded-lg"
       >
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
@@ -48,7 +48,7 @@ const ContactForm = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full p-2 md:p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#1E3A8A] focus:border-[#1E3A8A]"
+              className="w-full p-2 md:p-3   bg-white  rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-[#1E3A8A]"
               placeholder="نام خود را وارد کنید"
               required
             />
@@ -66,7 +66,7 @@ const ContactForm = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-2 md:p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#1E3A8A] focus:border-[#1E3A8A]"
+              className="w-full p-2 md:p-3  bg-white rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-[#1E3A8A]"
               placeholder="ایمیل خود را وارد کنید"
               required
             />
@@ -84,7 +84,7 @@ const ContactForm = () => {
               name="subject"
               value={formData.subject}
               onChange={handleChange}
-              className="w-full p-2 md:p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#1E3A8A] focus:border-[#1E3A8A]"
+              className="w-full p-2 md:p-3   bg-white  rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-[#1E3A8A]"
               placeholder="موضوع پیام خود را وارد کنید"
               required
             />
@@ -101,7 +101,7 @@ const ContactForm = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full p-2 md:p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#1E3A8A] focus:border-[#1E3A8A]"
+              className="w-full p-2 md:p-3  bg-white  rounded-lg focus:ring-2 focus:ring-[#1E3A8A] focus:border-[#1E3A8A]"
               placeholder="متن پیام خود را وارد کنید"
               rows="4"
               required
@@ -109,13 +109,13 @@ const ContactForm = () => {
           </div>
           <button
             type="submit"
-            className="w-full p-3 bg-gray-600 text-white font-semibold rounded-md hover:bg-[#1e3b8a41] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
+            className="w-full p-3 bg-[#1e3a8a] text-white font-semibold rounded-lg hover:bg-[#374eb0] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2"
           >
             ارسال پیام
           </button>
         </form>
       </div>
-      <div className="relative w-full h-[400px]">
+      <div className="relative w-full h-[380px]">
         <div className="absolute bottom-0 left-0 right-0">
           <WaveAnimation />
         </div>

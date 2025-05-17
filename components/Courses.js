@@ -2,15 +2,13 @@ import React from "react";
 
 function Courses() {
   return (
-    <div dir="rtl" id="certifection" className="py-24">
-      <div className="flex flex-col justify-center items-center mb-8 max-w-5xl mx-auto ">
-        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-4">
-          دوره ها و مدارک
-        </h1>
-        <div className="w-[70%] md:w-[70%] h-[1px] bg-fuchsia-800 mb-6"></div>
+    <div dir="rtl" id="certifection" className="py-10 mb-20">
+      <div className="flex flex-col m-auto justify-center items-center w-[300px] h-[100px]">
+        <h1 className="text-2xl font-bold"> سوابق کاری</h1>
+        <div className="h-[2px] w-[200px] bg-[#1E3A8A]"></div>
       </div>
 
-      <div className="flex flex-col items-center space-y-10">
+      <div className="flex flex-col items-center space-y-10 mt-16">
         <ol className="flex flex-col sm:flex-row w-full max-w-5xl justify-center items-center gap-10">
           {[
             {

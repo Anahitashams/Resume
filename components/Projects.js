@@ -1,33 +1,91 @@
 import React from "react";
-import { FaThumbtack } from "react-icons/fa";
+import Image from "next/image";
 
 function Projects() {
   return (
-    <div id="projects" dir="rtl" className="py-24 px-4 max-w-5xl mx-auto">
-      <div
-        id="experience"
-        className="flex flex-col justify-center items-center mb-8"
-      >
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4">
-          سوابق کاری
-        </h1>
-        <div className="w-[70%] md:w-[70%] h-[1px] bg-fuchsia-800 mb-6 "></div>
+    <div
+      id="skills"
+      className="w-full h-auto flex flex-col justify-center items-center overflow-hidden"
+    >
+      <div className="flex flex-col justify-center items-center w-[300px] h-[100px]">
+        <h1 className="text-2xl font-bold">پروژه های من</h1>
+        <div className="h-[2px] w-[200px] bg-[#1E3A8A]"></div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {[...Array(9)].map((_, index) => (
-          <div
-            key={index}
-            className="relative bg-purple-50 shadow-lg rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:scale-105 transition-transform duration-300"
-          >
-            <div className="absolute -top-5">
-              <FaThumbtack className="text-purple-900 text-3xl rotate-45" />
-            </div>
 
-            <p className="text-gray-700 text-sm sm:text-base">
-              این یک توضیح کوتاه برای پروژه است. حداکثر در دو خط نوشته شود.
-            </p>
-          </div>
-        ))}
+      <div className="h-[300px] mt-16 w-[40%] flex flex-row items-center rounded-2xl overflow-hidden bg-white shadow-lg">
+        <div className="w-1/2 h-full bg-amber-600">
+          <Image
+            className="h-full w-full object-cover"
+            src="/img/images.jpg"
+            width={500}
+            height={500}
+            alt="project"
+          />
+        </div>
+        <div className="w-1/2 h-full bg-white flex items-center justify-end flex-col px-4">
+          <h1 className="mt-6 font-bold text-lg">dacsczf</h1>
+          <p className="mt-4 text-base text-center">
+            lorem10 fvfzzzzzzzzzzzzzvffdfvdxdlorem10 fvfzzzzzzzzzzzzzvffdfvdxd
+          </p>
+          <h2 className="mt-10 font-bold text-xl">123</h2>
+        </div>
+      </div>
+
+      <div className="h-[300px] mt-16 w-[40%] flex flex-row items-center rounded-2xl overflow-hidden bg-white shadow-lg">
+        <div className="w-1/2 h-full bg-white flex items-center justify-end flex-col px-4">
+          <h1 className="mt-6 font-bold text-lg">dacsczf</h1>
+          <p className="mt-4 text-base text-center">
+            lorem10 fvfzzzzzzzzzzzzzvffdfvdxdlorem10 fvfzzzzzzzzzzzzzvffdfvdxd
+          </p>
+          <h2 className="mt-10 font-bold text-xl">123</h2>
+        </div>
+        <div className="w-1/2 h-full bg-amber-600">
+          <Image
+            className="h-full w-full object-cover"
+            src="/img/images.jpg"
+            width={500}
+            height={500}
+            alt="project"
+          />
+        </div>
+      </div>
+
+      <div className="h-[300px] mt-16 w-[40%] flex flex-row items-center rounded-2xl overflow-hidden bg-white shadow-lg">
+        <div className="w-1/2 h-full bg-amber-600">
+          <Image
+            className="h-full w-full object-cover"
+            src="/img/images.jpg"
+            width={500}
+            height={500}
+            alt="project"
+          />
+        </div>
+        <div className="w-1/2 h-full bg-white flex items-center justify-end flex-col px-4">
+          <h1 className="mt-6 font-bold text-lg">dacsczf</h1>
+          <p className="mt-4 text-base text-center">
+            lorem10 fvfzzzzzzzzzzzzzvffdfvdxdlorem10 fvfzzzzzzzzzzzzzvffdfvdxd
+          </p>
+          <h2 className="mt-10 font-bold text-xl">123</h2>
+        </div>
+      </div>
+
+      <div className="h-[300px] mt-16 w-[40%] flex flex-row items-center rounded-2xl overflow-hidden bg-white shadow-lg">
+        <div className="w-1/2 h-full bg-white flex items-center justify-end flex-col px-4">
+          <h1 className="mt-6 font-bold text-lg">dacsczf</h1>
+          <p className="mt-4 text-base text-center">
+            lorem10 fvfzzzzzzzzzzzzzvffdfvdxdlorem10 fvfzzzzzzzzzzzzzvffdfvdxd
+          </p>
+          <h2 className="mt-10 font-bold text-xl">123</h2>
+        </div>
+        <div className="w-1/2 h-full bg-amber-600">
+          <Image
+            className="h-full w-full object-cover"
+            src="/img/images.jpg"
+            width={500}
+            height={500}
+            alt="project"
+          />
+        </div>
       </div>
     </div>
   );

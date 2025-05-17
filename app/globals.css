@@ -21,3 +21,28 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+@keyframes cloudMoveSlow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200vw);
+  }
+}
+
+@keyframes cloudMoveFast {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(250vw);
+  }
+}
+
+.animate-cloudMoveSlow {
+  animation: cloudMoveSlow 120s linear infinite;
+}
+
+.animate-cloudMoveFast {
+  animation: cloudMoveFast 80s linear infinite;
+}
