@@ -1,5 +1,4 @@
 import React from "react";
-// import { GraduationCap } from "lucide-react";
 
 function EducationBox() {
   const educationData = [

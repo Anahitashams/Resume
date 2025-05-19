@@ -7,12 +7,11 @@ import Education from "@/components/Education";
 import Projects from "@/components/Skill";
 import Call from "@/components/Call";
 import Courses from "@/components/Courses";
-// import Test from "@/components/Test";
-
+import Hook from "./hook/Hook";
 function page() {
   return (
     <div>
-      {/* <Test /> */}
+      <Hook />
 
       <Aboutme />
       <Skill />
