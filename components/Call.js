@@ -25,7 +25,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div id="call" className="px-4  h-auto w-full">
+    <div id="call" className="px-4  h-[50%] w-full">
       <div className="flex flex-col m-auto justify-center items-center w-[300px] h-[100px]">
         <h1 className="text-2xl font-bold">تماس با من</h1>
         <div className="h-[2px] w-[200px] bg-[#1E3A8A]"></div>
@@ -115,7 +115,7 @@ const ContactForm = () => {
           </button>
         </form>
       </div>
-      <div className="relative w-full h-[380px]">
+      <div className="relative w-full h-[300px]">
         <div className="absolute bottom-0 left-0 right-0">
           <WaveAnimation />
         </div>

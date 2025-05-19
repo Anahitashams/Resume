@@ -7,7 +7,7 @@ const BlobImage = () => {
   return (
     <div
       dir="rtl"
-      className=" relative flex flex-row-reverse items-center    h-screen overflow-hidden w-full"
+      className="relative flex flex-row-reverse items-center h-screen overflow-hidden w-full"
     >
       <div className="flex flex-col w-[55%] px-36 text-justify h-[400px] items-center justify-start">
         <h1 className="font-bold text-5xl text-justify">
@@ -20,19 +20,44 @@ const BlobImage = () => {
         </h2>
 
         <div className="flex flex-row w-full justify-center items-center mt-10">
-          <button className="w-[200px] h-[60px] text-[#F3F4F6] rounded-xl ml-2 bg-[#1E3A8A] shadow-md shadow-gray-400 hover:cursor-pointer hover:scale-110 duration-300">
+          <button
+            className="w-[200px] h-[60px] text-[#F3F4F6] rounded-xl ml-2 bg-[#1E3A8A] shadow-md shadow-gray-400 hover:cursor-pointer hover:scale-110 duration-300 animate-bounce"
+            style={{ animationDelay: "0s", animationDuration: "2s" }}
+          >
             گیت هاب
           </button>
 
           <button
-            className="w-[200px] h-[60px] text-[#F3F4F6] rounded-xl mr-2 bg-[#374151] shadow-md shadow-gray-400 hover:cursor-pointer hover:scale-110 duration-300 "
+            className="w-[200px] h-[60px] text-[#F3F4F6] rounded-xl mr-2 bg-[#374151] shadow-md shadow-gray-400 hover:cursor-pointer hover:scale-110 duration-300 animate-bounce"
+            style={{ animationDelay: "0.5s", animationDuration: "2s" }}
             type="submit"
           >
             لینکدین
           </button>
         </div>
+
+        {/* فلش متحرک بزرگ که فقط به دکمه گیت‌هاب اشاره می‌کند */}
+        {/* <div className="relative w-full">
+          <div className="absolute ml-80 top-[20px] animate-bounce">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-24 h-24 text-black"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={3}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </div>
+        </div> */}
       </div>
-      <div className=" absolute  w-[60%] h-[50%] -top-56 -right-[250px] z-0 ">
+
+      <div className="absolute w-[60%] h-[50%] -top-56 -right-[250px] z-0">
         <svg
           className="top-0 right-0"
           viewBox="0 0 405 405"
