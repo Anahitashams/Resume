@@ -10,9 +10,7 @@ const BlobImage = () => {
       className="relative flex flex-row-reverse items-center h-screen overflow-hidden w-full"
     >
       <div className="flex flex-col w-[55%] px-36 text-justify h-[400px] items-center justify-start">
-        <h1 className="font-bold text-5xl text-justify">
-          سلام،من آناهیتا شمس هستم.
-        </h1>
+        <h1 className="font-bold text-5xl text-justify">آناهیتا شمس</h1>
         <h2 className="mt-10 text-[20px]">
           من برنامه نویس و طراح سایت هستم , توسعه و تولید وبسایت های مختلف برای
           انواع کسب و کارها و شرکت ها از خدمات ما تخصصی ما محسوب میشود.با ما
