@@ -5,16 +5,15 @@ import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import Projects from "@/components/Skill";
 import Courses from "@/components/Courses";
-// import Hook from "./hook/Hook";
+import Language from "@/components/Language";
 function page() {
   return (
     <div>
-      {/* <Hook /> */}
-
       <Aboutme />
-      <Skill />
       <Projects />
+      <Skill />
       <Courses />
+      <Language />
       <Experience />
       <Education />
     </div>

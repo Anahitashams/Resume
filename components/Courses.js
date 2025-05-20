@@ -2,7 +2,7 @@ import React from "react";
 
 function Courses() {
   return (
-    <div dir="rtl" id="certifection" className="py-10 mb-20">
+    <div dir="rtl" id="experience" className="py-10 mb-20">
       <div className="flex flex-col m-auto justify-center items-center w-[300px] h-[100px]">
         <h1 className="text-2xl font-bold"> سوابق کاری</h1>
         <div className="h-[2px] w-[200px] bg-[#1E3A8A]"></div>

@@ -24,8 +24,8 @@ function Header() {
     { href: "#experience", label: "سوابق کاری" },
     { href: "#education", label: "سوابق تحصیلی" },
     { href: "#", label: "LOGO", isLogo: true },
-    { href: "#languages", label: "زبان" },
-    { href: "#projects", label: "پروژه ها" },
+    { href: "#Language", label: "زبان" },
+    { href: "#Projects", label: "پروژه ها" },
     { href: "#certifection", label: "دوره ها و مدارک" },
     { href: "#call", label: "تماس با من" },
   ];

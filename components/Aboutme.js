@@ -6,6 +6,7 @@ import Image from "next/image";
 const BlobImage = () => {
   return (
     <div
+      id="about-me"
       dir="rtl"
       className="relative flex flex-row-reverse items-center h-screen overflow-hidden w-full"
     >

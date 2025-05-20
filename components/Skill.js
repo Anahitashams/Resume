@@ -40,7 +40,7 @@ const cards = [
 
 export default function Projects() {
   return (
-    <div id="projects" dir="rtl" className="py-24 px-4 max-w-5xl mx-auto">
+    <div id="skills" dir="rtl" className=" px-4 max-w-6xl mx-auto">
       <div className="flex flex-col m-auto justify-center items-center w-[300px] h-[100px]">
         <h1 className="text-2xl font-bold">مهارت‌ها</h1>
         <div className="h-[2px] w-[200px] bg-[#1E3A8A]"></div>
