@@ -1,0 +1,66 @@
+{
+  "posts": [
+    {
+      "name": "1",
+      "lname": "a title",
+      "age": 100,
+      "text": "a text"
+    },
+    {
+      "name": "2",
+      "lname": "a title",
+      "age": 100,
+      "text": "a text"
+    },
+    {
+      "id": "e688",
+      "name": "Anahita",
+      "lname": "shams",
+      "age": "18",
+      "text": "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwweeeeeeee"
+    },
+    {
+      "id": "acf7",
+      "name": "Anahita",
+      "lname": "shams",
+      "age": "18",
+      "text": "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwweeeeeeeesfgnweweweweweewew"
+    },
+    {
+      "id": "1904",
+      "name": "Anahita",
+      "lname": "shams",
+      "age": "18",
+      "text": "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwweeeeeeeesfgnweweweweweewew"
+    },
+    {
+      "id": "e4a7",
+      "name": "Anahita",
+      "lname": "shams",
+      "age": "18",
+      "text": "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwweeeeeeeesfgnweweweweweewew"
+    },
+    {
+      "id": "96a1",
+      "name": "sd",
+      "lname": "sd",
+      "age": "sdf",
+      "text": "yhfgfg"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,56 +1,55 @@
 "use client";
+import React, { useState } from "react";
 
-import { useState } from "react";
-
-export default function Home() {
-  const [form, setForm] = useState({
+function Page() {
+  const [Form, setForm] = useState({
     fname: "",
     lname: "",
     age: "",
   });
 
-  const [fname, setFname] = useState("");
-  const [lname, setLname] = useState("");
-  const [age, setAge] = useState("");
-
-  const changeHandler = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-
-    setForm({ [name]: value });
+  const ChangeHandler = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const submitHandler = (e) => {
+  const SubmitHandler = (e) => {
     e.preventDefault();
-
-    console.log(form);
+    console.log(Form);
   };
+
   return (
-    <form onSubmit={submitHandler} className="flex flex-col w-36">
-      <input
-        className="bg-red-200 mt-2"
-        type="text"
-        name="fname"
-        value={fname}
-        onChange={(e) => setFname(e.target.value)}
-      />
-      <input
-        className="bg-red-200 mt-2"
-        type="text"
-        name="lname"
-        value={lname}
-        onChange={(e) => setLname(e.target.value)}
-      />
-      <input
-        className="bg-red-200 mt-2"
-        type="text"
-        name="age"
-        value={age}
-        onChange={(e) => setAge(e.target.value)}
-      />
-      <button className="bg-blue-300" type="submit">
-        submit
-      </button>
-    </form>
+    <>
+      <div className="h-[600px] m-auto flex flex-col">
+        <form onSubmit={SubmitHandler}>
+          <input
+            type="text"
+            name="fname"
+            value={Form.fname}
+            onChange={ChangeHandler}
+            className="size-7 bg-amber-600"
+          />
+          <input
+            type="text"
+            name="lname"
+            value={Form.lname}
+            onChange={ChangeHandler}
+            className="size-7 bg-amber-600"
+          />
+          <input
+            type="text"
+            name="age"
+            value={Form.age}
+            onChange={ChangeHandler}
+            className="size-7 bg-amber-600"
+          />
+          <button type="submit" className="size-10 bg-blue-800">
+            click
+          </button>
+        </form>
+      </div>
+    </>
   );
 }
+
+export default Page;

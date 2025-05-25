@@ -22,17 +22,11 @@ function Header() {
     { href: "#about-me", label: "درباره من" },
     { href: "#skills", label: "مهارت ها" },
     { href: "#experience", label: "سوابق کاری" },
-    { href: "#education", label: "سوابق تحصیلی" },
     { href: "#", label: "LOGO", isLogo: true },
-    { href: "#Language", label: "زبان" },
+    { href: "#education", label: "سوابق تحصیلی" },
     { href: "#Projects", label: "پروژه ها" },
-    { href: "#certifection", label: "دوره ها و مدارک" },
     { href: "#call", label: "تماس با من" },
   ];
-
-  const textColorChangeIndex = menuItems.findIndex(
-    (item) => item.href === "#experience"
-  );
 
   return (
     <header
@@ -58,7 +52,7 @@ function Header() {
           } w-full sm:block sm:w-auto mt-4 sm:mt-0`}
         >
           <ul className="flex flex-wrap sm:flex-nowrap sm:flex-row sm:items-center gap-2 sm:gap-4 bg-[#1e3a8a] sm:bg-transparent rounded-md sm:rounded-none p-4 sm:p-0">
-            {menuItems.map(({ href, label, isLogo }, index) => (
+            {menuItems.map(({ href, label, isLogo }) => (
               <li key={href} className="whitespace-nowrap">
                 {isLogo ? (
                   <div className="ml-[100px] mr-[100px] w-[150px] sm:px-4 sm:mx-4 flex-shrink-0">
@@ -74,13 +68,7 @@ function Header() {
                   <Link
                     href={href}
                     onClick={() => setIsOpen(false)}
-                    className={`block px-[30px]  transition text-sm sm:text-base ${
-                      href === "#experience"
-                        ? "text-white"
-                        : index >= textColorChangeIndex
-                        ? "text-[#374151] hover:text-gray-600"
-                        : "text-white hover:text-gray-300"
-                    }`}
+                    className="block px-[30px] transition text-white hover:text-gray-300 text-sm sm:text-base"
                   >
                     {label}
                   </Link>
