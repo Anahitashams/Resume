@@ -1,7 +1,6 @@
 import React from "react";
 import {
   FaReact,
-  FaNodeJs,
   FaHtml5,
   FaCss3Alt,
   FaJs,
@@ -9,14 +8,32 @@ import {
   FaDatabase,
   FaMobileAlt,
   FaFigma,
+  FaServer,
+  FaSitemap, // برای SEO
+  FaProjectDiagram, // برای Context یا UX
 } from "react-icons/fa";
+
+import { SiRedux, SiTypescript, SiNextdotjs } from "react-icons/si";
 
 const cards = [
   {
     icon: <FaReact size={32} />,
     text: "تسلط بر React و ساخت رابط کاربری حرفه‌ای",
   },
-  { icon: <FaNodeJs size={32} />, text: "توسعه بک‌اند با Node.js و Express" },
+  {
+    icon: <FaServer size={32} />,
+    text: "طراحی و پیاده‌سازی RESTful API حرفه‌ای",
+  },
+  { icon: <SiNextdotjs size={32} />, text: "برنامه‌نویسی SSR با Next.js" },
+  {
+    icon: <SiTypescript size={32} />,
+    text: "توسعه با TypeScript و تایپ‌سیستم قوی",
+  },
+  { icon: <SiRedux size={32} />, text: "مدیریت حالت با Redux" },
+  {
+    icon: <FaProjectDiagram size={32} />,
+    text: "Context API برای مدیریت state ساده‌تر",
+  },
   { icon: <FaHtml5 size={32} />, text: "ساخت صفحات وب با HTML5 استاندارد" },
   {
     icon: <FaCss3Alt size={32} />,
@@ -34,7 +51,15 @@ const cards = [
   },
   {
     icon: <FaFigma size={32} />,
-    text: "طراحی UI با Figma و طراحی تجربه کاربری",
+    text: "طراحی UI با Figma و طراحی تجربه کاربری (UX/UI)",
+  },
+  {
+    icon: <FaSitemap size={32} />,
+    text: "بهینه‌سازی سئو و ساختار سایت برای موتورهای جستجو",
+  },
+  {
+    icon: <FaReact size={32} />,
+    text: "کار با React Hooks برای مدیریت lifecycle و state",
   },
 ];
 

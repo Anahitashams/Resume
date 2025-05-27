@@ -1,42 +1,66 @@
 import React from "react";
+import Image from "next/image";
 
 function Language() {
-  const educationData = [
-    {
-      degree: "کارشناسی مهندسی آب",
-      university: "دانشگاه تهران",
-      years: "۱۳۸۵ - ۱۳۸۹",
-    },
+  const skills = [
+    { name: "Speaking (صحبت کردن)", level: 100 },
+    { name: "Listening (شنیداری)", level: 80 },
+    { name: "Reading (خواندن)", level: 100 },
+    { name: "Writing (نوشتن)", level: 80 },
   ];
 
   return (
-    <div id="Language" dir="rtl" className="px-4 py-24 max-w-5xl mx-auto">
-      <div className="flex flex-col justify-center items-center mb-8 max-w-5xl">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 mx-auto">
-          سوابق تحصیلی
-        </h1>
-        <div className="w-[70%] md:w-[70%] h-[1px] bg-fuchsia-800 mb-6"></div>
+    <div dir="rtl" className="w-full px-4 sm:px-8 md:px-16 lg:px-32 py-12">
+      <div className="flex flex-col justify-center items-center w-full max-w-xs mx-auto">
+        <h1 className="text-xl sm:text-2xl font-bold">زبان</h1>
+        <div className="h-[2px] w-[150px] sm:w-[200px] bg-[#1E3A8A] mt-2"></div>
       </div>
-      <div dir="rtl" className="px-4  max-w-3xl mx-auto">
-        <div className="space-y-6">
-          {educationData.map((edu, index) => (
-            <div
-              key={index}
-              className="relative border border-gray-300 rounded-xl shadow-sm p-6 bg-white"
-            >
-              <div className="absolute -right-5 top-1/2 transform -translate-y-1/2 bg-white border border-fuchsia-800 rounded-full p-2 shadow-md">
-                {/* <GraduationCap className="text-fuchsia-800" size={24} /> */}
-              </div>
 
-              <div className="pr-12">
-                <p className="text-lg font-semibold text-gray-800">
-                  {edu.degree}
-                </p>
-                <p className="text-sm text-gray-600">{edu.university}</p>
-                <p className="text-sm text-gray-400 mt-1">{edu.years}</p>
-              </div>
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-8 mt-12">
+        {/* Blob image */}
+        <div className="relative w-full max-w-md aspect-square">
+          <Image
+            src="/blob-1-opacity-90.gif"
+            alt="blob"
+            fill
+            className="object-contain z-0"
+          />
+          <div className="absolute inset-0 flex items-center justify-center z-10">
+            <p className="text-lg font-semibold text-white rounded-xl px-4 py-2 ">
+              مسلط به زبان انگلیسی
+            </p>
+          </div>
+        </div>
+
+        {/* Language Cards + Skill Progress */}
+        <div className="flex flex-col items-center w-full max-w-xl">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 w-full mt-8 text-right">
+            <div className="bg-[#f1f3f6e5] rounded-2xl shadow-lg p-6 w-full sm:w-1/2">
+              <h2 className="font-semibold text-lg sm:text-xl mb-2">فارسی</h2>
+              <p className="text-sm text-gray-600">زبان مادری</p>
             </div>
-          ))}
+            <div className="bg-[#f1f3f6e5] rounded-2xl shadow-lg p-6 w-full sm:w-1/2">
+              <h2 className="font-semibold text-lg sm:text-xl mb-2">انگلیسی</h2>
+              <p className="text-sm text-gray-600">سطح پیشرفته (Advanced)</p>
+            </div>
+          </div>
+
+          <div className="bg-[#f1f3f6e5] rounded-2xl shadow-lg p-6 w-full mt-8 text-right">
+            <h2 className="font-semibold text-lg sm:text-xl mb-4">
+              مهارت‌های زبان انگلیسی
+            </h2>
+            {skills.map((skill, index) => (
+              <div key={index} className="mb-4">
+                <p className="text-sm text-gray-700 mb-1">{skill.name}</p>
+                <div className="w-full bg-gray-200 rounded-full h-3">
+                  <div
+                    className="bg-[#1E3A8A] h-3 rounded-full transition-all duration-500"
+                    style={{ width: `${skill.level}%` }}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

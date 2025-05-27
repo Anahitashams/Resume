@@ -5,13 +5,11 @@ import Education from "@/components/Education";
 import Projects from "@/components/Skill";
 import Language from "@/components/Language";
 import Courses from "@/components/Courses";
+import Call from "@/components/Call";
 import Home from "@/components/Home";
-// import Clouds from "@/components/Clouds";
-
 function Love() {
   return (
     <div>
-      {/* <Clouds /> */}
       <Home />
       <Aboutme />
       <Projects />
@@ -19,6 +17,7 @@ function Love() {
       <Courses />
       <Language />
       <Education />
+      <Call />
     </div>
   );
 }

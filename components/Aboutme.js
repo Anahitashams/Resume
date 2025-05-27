@@ -2,64 +2,17 @@
 
 import React from "react";
 import Image from "next/image";
-import Clouds from "./Clouds";
 
 const BlobImage = () => {
   return (
     <div
       id="about-me"
       dir="rtl"
-      className="relative flex flex-row-reverse items-center h-screen overflow-hidden w-full"
+      className="relative flex flex-col md:flex-row items-center overflow-hidden w-full min-h-screen px-4 md:px-12 py-12"
     >
-      <div className="flex flex-col w-[55%] px-36 text-justify h-[400px] items-center justify-start">
-        <h1 className="font-bold text-5xl text-justify">آناهیتا شمس</h1>
-        <h2 className="mt-10 text-[20px] ">
-          من برنامه نویس و طراح سایت هستم , توسعه و تولید وبسایت های مختلف برای
-          انواع کسب و کارها و شرکت ها از خدمات ما تخصصی ما محسوب میشود.با ما
-          تجربه فروش,معرفی و محبوبیتی . لذتبخش را تجربه کنید
-        </h2>
-
-        <div className="flex flex-row w-full justify-center items-center mt-10">
-          <button
-            className="w-[200px] h-[60px] text-[#F3F4F6] rounded-xl ml-2 bg-[#1E3A8A] shadow-md shadow-gray-400 hover:cursor-pointer hover:scale-110 duration-300 animate-bounce"
-            style={{ animationDelay: "0s", animationDuration: "2s" }}
-          >
-            گیت هاب
-          </button>
-
-          <button
-            className="w-[200px] h-[60px] text-[#F3F4F6] rounded-xl mr-2 bg-[#374151] shadow-md shadow-gray-400 hover:cursor-pointer hover:scale-110 duration-300 animate-bounce"
-            style={{ animationDelay: "0.5s", animationDuration: "2s" }}
-            type="submit"
-          >
-            لینکدین
-          </button>
-        </div>
-        <Clouds />
-        {/* فلش متحرک بزرگ که فقط به دکمه گیت‌هاب اشاره می‌کند */}
-        {/* <div className="relative w-full">
-          <div className="absolute ml-80 top-[20px] animate-bounce">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-24 h-24 text-black"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={3}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </div>
-        </div> */}
-      </div>
-
-      <div className="absolute w-[60%] h-[50%] -top-56 -right-[250px] z-0">
+      <div className="relative w-full md:w-[50%] h-[400px] md:h-[600px] mb-10 md:mb-0 order-1 md:order-2">
         <svg
-          className="top-0 right-0"
+          className="absolute top-0 left-0 w-full h-full"
           viewBox="0 0 405 405"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -68,7 +21,7 @@ const BlobImage = () => {
             fill="#1E3A8A"
           />
         </svg>
-        <div className="absolute top-48 right-48 z-10 w-[200px] h-[200px] sm:w-32 sm:h-32 md:w-36 md:h-36 overflow-hidden shadow-lg">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] sm:w-40 sm:h-40 md:w-48 md:h-48 overflow-hidden shadow-lg rounded-full">
           <Image
             src="/img/images.pg"
             alt="Your profile"
@@ -76,6 +29,33 @@ const BlobImage = () => {
             className="object-cover"
           />
         </div>
+      </div>
+
+      {/* بخش متن */}
+      <div className="flex flex-col w-full md:w-[55%] md:px-24 text-justify items-center justify-start order-2 md:order-1">
+        <div className="flex flex-col justify-center items-center w-full md:w-[300px] h-[100px]">
+          <h1 className="text-2xl font-bold">درباره من</h1>
+          <div className="h-[2px] w-[200px] bg-[#1E3A8A]"></div>
+        </div>
+
+        <h2 className="mt-10 text-[16px] md:text-[20px] leading-8 md:leading-9">
+          اینجانب آناهیتا شمس، طراح و توسعه‌دهنده وب‌سایت، با تمرکز بر ارائه
+          راهکارهای نوآورانه و تخصصی در حوزه طراحی و پیاده‌سازی وب‌سایت‌های
+          شرکتی، فروشگاهی و شخصی فعالیت می‌کنم.
+          <br />
+          برند آناتک با هدف ارتقاء سطح کیفی حضور آنلاین کسب‌وکارها ایجاد شده و
+          در راستای طراحی رابط‌های کاربری جذاب، توسعه ساختارهای فنی بهینه و
+          ایجاد تجربه کاربری مؤثر، خدمات خود را ارائه می‌دهد.
+          <br />
+          تعهد به دقت در جزئیات، بهره‌گیری از فناوری‌های روز و درک عمیق نیازهای
+          هر مشتری، از اصول کلیدی در فرآیند همکاری با کارفرمایان گرامی می‌باشد.
+          در آناتک طراحی وب‌سایت صرفاً یک فرآیند فنی نیست؛ بلکه تلفیقی‌ست از
+          هنر، تخصص و استراتژی که منجر به خلق بستری قدرتمند برای معرفی، توسعه و
+          رشد کسب‌وکار شما می‌گردد.
+          <br />
+          هدف من ارائه خدماتی مبتنی بر اعتماد، کیفیت و اثربخشی است تا وب‌سایت
+          شما فراتر از یک حضور دیجیتال ساده، به ابزاری برای موفقیت تبدیل شود.
+        </h2>
       </div>
     </div>
   );

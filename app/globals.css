@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background-color: rgb(241, 241, 241);
+  background-color: #fff;
   color: var(--foreground);
   font-family: Vazir, sans-serif;
 }

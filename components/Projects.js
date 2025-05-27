@@ -6,92 +6,73 @@ function Projects() {
     <>
       <div
         id="Projects"
-        className="flex flex-col justify-center items-center w-[300px] h-[100px] m-auto"
+        className="flex flex-col justify-center items-center w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl m-auto pt-8"
       >
-        <h1 className="text-2xl font-bold">پروژه های من</h1>
-        <div className="h-[2px] w-[200px] bg-[#1E3A8A]"></div>
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold">
+          پروژه‌های من
+        </h1>
+        <div className="h-[2px] w-[150px] sm:w-[200px] bg-[#1E3A8A] mt-2"></div>
       </div>
 
-      <div className="w-full flex flex-col items-center">
-        <div className="flex flex-wrap justify-center gap-8 mt-8">
-          <div className="h-[300px] w-[500px]  flex flex-row items-center rounded-2xl overflow-hidden bg-white shadow-lg shadow-gray-200">
-            <div className="w-1/2 h-full">
+      <div className="w-full flex flex-col items-center px-4 sm:px-8 md:px-16 lg:px-32 py-8 space-y-8">
+        {[
+          {
+            title: "رستوران گلبرگ",
+            desc: "یک وبسایت شیک، خاص و لوکس برای یک رستوران برند و شیک",
+            year: "1403",
+            image: "/plants.png",
+            reverse: false,
+          },
+          {
+            title: "رستوران گلبرگ",
+            desc: "یک وبسایت شیک، خاص و لوکس برای یک رستوران برند و شیک",
+            year: "1403",
+            image: "/plants.png",
+            reverse: true,
+          },
+          {
+            title: "رستوران گلبرگ",
+            desc: "یک وبسایت شیک، خاص و لوکس برای یک رستوران برند و شیک",
+            year: "1403",
+            image: "/resturant.png",
+            reverse: false,
+          },
+          {
+            title: "اکسسوری موانا",
+            desc: "یک وبسایت شیک، خاص و لوکس برای یک رستوران اکسسوری خاص",
+            year: "1403",
+            image: "/accessury.png",
+            reverse: true,
+          },
+        ].map((project, index) => (
+          <div
+            key={index}
+            className={`flex flex-col ${
+              project.reverse ? "md:flex-row-reverse" : "md:flex-row"
+            } items-center rounded-2xl overflow-hidden bg-white shadow-lg shadow-gray-200 w-full max-w-4xl`}
+          >
+            <div className="w-full md:w-1/2 h-60 sm:h-72 md:h-80 lg:h-96">
               <Image
                 className="w-full h-full object-cover"
-                src="/resrutant.png"
-                width={500}
-                height={500}
+                src={project.image}
+                width={600}
+                height={600}
                 alt="project"
               />
             </div>
-            <div className="w-1/2 h-full bg-white flex flex-col items-center justify-center px-4 text-center">
-              <h1 className="font-bold text-lg">رستوران گلبرگ</h1>
-              <p className="text-base py-4">
-                یک وبسایت شیک، خاص و لوکس برای یک رستوران برند و شیک
+            <div className="w-full md:w-1/2 h-full bg-white flex flex-col items-center justify-center p-4 text-center space-y-2">
+              <h1 className="font-bold text-lg sm:text-xl md:text-2xl">
+                {project.title}
+              </h1>
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed">
+                {project.desc}
               </p>
-              <h2 className="font-bold text-xl">1403</h2>
+              <h2 className="font-bold text-base sm:text-lg md:text-xl">
+                {project.year}
+              </h2>
             </div>
           </div>
-
-          <div className="h-[300px] w-[500px] flex flex-row items-center rounded-2xl overflow-hidden bg-white shadow-lg shadow-gray-200">
-            <div className="w-1/2 h-full bg-white flex flex-col items-center justify-center px-4 text-center">
-              <h1 className="font-bold text-lg">رستوران گلبرگ</h1>
-              <p className="text-base py-4">
-                یک وبسایت شیک، خاص و لوکس برای یک رستوران برند و شیک
-              </p>
-              <h2 className="font-bold text-xl">1403</h2>
-            </div>
-            <div className="w-1/2 h-full">
-              <Image
-                className="w-full h-full object-cover"
-                src="/plants.png"
-                width={500}
-                height={500}
-                alt="project"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-8 mt-8">
-          <div className="h-[300px] w-[500px] flex flex-row items-center rounded-2xl overflow-hidden bg-white shadow-lg shadow-gray-200">
-            <div className="w-1/2 h-full">
-              <Image
-                className="w-full h-full object-cover"
-                src="/resturant.png"
-                width={500}
-                height={500}
-                alt="project"
-              />
-            </div>
-            <div className="w-1/2 h-full bg-white flex flex-col items-center justify-center px-4 text-center">
-              <h1 className="font-bold text-lg">رستوران گلبرگ</h1>
-              <p className="text-base py-4">
-                یک وبسایت شیک، خاص و لوکس برای یک رستوران برند و شیک
-              </p>
-              <h2 className="font-bold text-xl">1403</h2>
-            </div>
-          </div>
-
-          <div className="h-[300px] w-[500px] flex flex-row items-center rounded-2xl overflow-hidden bg-white shadow-lg shadow-gray-200">
-            <div className="w-1/2 h-full bg-white flex flex-col items-center justify-center px-4 text-center">
-              <h1 className="font-bold text-lg"> اکسسوری موانا</h1>
-              <p className="text-base py-4">
-                یک وبسایت شیک، خاص و لوکس برای یک رستوران اکسسوری خاص
-              </p>
-              <h2 className="font-bold text-xl">1403</h2>
-            </div>
-            <div className="w-1/2 h-full">
-              <Image
-                className="w-full h-full object-cover"
-                src="/accessury.png"
-                width={500}
-                height={500}
-                alt="project"
-              />
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </>
   );

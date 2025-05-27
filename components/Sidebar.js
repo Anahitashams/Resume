@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -32,30 +33,41 @@ function Header() {
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         showHeader ? "opacity-100" : "opacity-0 pointer-events-none"
-      }`}
+      }  sm:bg-transparent`}
     >
       <div
-        className="flex items-center justify-center px-4 py-3 max-w-7xl mx-auto rounded-b-xl"
+        className="flex flex-col sm:flex-row items-center justify-center px-4 py-3 max-w-7xl mx-auto"
         dir="rtl"
       >
-        <button
-          onClick={toggleMenu}
-          className="text-white sm:hidden focus:outline-none"
-          aria-label="Toggle Menu"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* همبرگر آیکون در mobile */}
+        <div className="w-full flex justify-between items-center sm:hidden">
+          <Image
+            src="/logo.png"
+            alt="ANATECH Logo"
+            width={50}
+            height={50}
+            className="mr-2"
+          />
+          <button
+            onClick={toggleMenu}
+            className="text-white focus:outline-none"
+            aria-label="Toggle Menu"
+          >
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
 
+        {/* منوی ناوبری */}
         <nav
           className={`${
             isOpen ? "block" : "hidden"
-          } w-full sm:block sm:w-auto mt-4 sm:mt-0`}
+          } w-full sm:flex sm:w-auto mt-4 sm:mt-0`}
         >
-          <ul className="flex flex-wrap sm:flex-nowrap sm:flex-row sm:items-center gap-2 sm:gap-4 bg-[#1e3a8a] sm:bg-transparent rounded-md sm:rounded-none p-4 sm:p-0">
+          <ul className="flex flex-col sm:flex-row items-center gap-4 bg-gray-100 sm:bg-transparent rounded-md sm:rounded-none p-4 sm:p-0">
             {menuItems.map(({ href, label, isLogo }) => (
               <li key={href} className="whitespace-nowrap">
                 {isLogo ? (
-                  <div className="ml-[100px] mr-[100px] w-[150px] sm:px-4 sm:mx-4 flex-shrink-0">
+                  <div className="mx-8 sm:mx-12 w-[100px] sm:w-[150px] flex-shrink-0">
                     <Image
                       src="/logo.png"
                       alt="ANATECH Logo"
@@ -68,7 +80,7 @@ function Header() {
                   <Link
                     href={href}
                     onClick={() => setIsOpen(false)}
-                    className="block px-[30px] transition text-white hover:text-gray-300 text-sm sm:text-base"
+                    className="block px-4 py-1 text-gray-700 text-sm sm:text-base transition hover:text-gray-500"
                   >
                     {label}
                   </Link>
