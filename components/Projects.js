@@ -8,10 +8,10 @@ function Projects() {
         id="Projects"
         className="flex flex-col justify-center items-center w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl m-auto pt-8"
       >
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold">
-          پروژه‌های من
-        </h1>
-        <div className="h-[2px] w-[150px] sm:w-[200px] bg-[#1E3A8A] mt-2"></div>
+        <div className="flex flex-col py-24 justify-center items-center w-full max-w-xs mx-auto">
+          <h1 className="text-xl sm:text-2xl font-bold">پروژه ها</h1>
+          <div className="h-[2px] w-[150px] sm:w-[200px] bg-[#1E3A8A] mt-2"></div>
+        </div>
       </div>
 
       <div className="w-full flex flex-col items-center px-4 sm:px-8 md:px-16 lg:px-32 py-8 space-y-8">

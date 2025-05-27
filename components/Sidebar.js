@@ -80,7 +80,7 @@ function Header() {
                   <Link
                     href={href}
                     onClick={() => setIsOpen(false)}
-                    className="block px-4 py-1 text-gray-700 text-sm sm:text-base transition hover:text-gray-500"
+                    className="block px-4 py-1 lg:text-gray-50 lg:hover:text-gray-200 sm:text-gray-700 text-sm sm:text-base transition sm:hover:text-gray-500"
                   >
                     {label}
                   </Link>

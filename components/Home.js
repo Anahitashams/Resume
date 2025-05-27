@@ -9,7 +9,7 @@ function Home() {
     <div className="h-screen w-full bg-white relative overflow-hidden">
       <Clouds />
 
-      <div className="absolute top-32 sm:top-40 md:top-44 lg:top-56 left-0 right-0 flex flex-col-reverse lg:flex-row items-center lg:items-start justify-center px-4 sm:px-8 md:px-12 lg:px-20 z-10 space-y-10 lg:space-y-0 lg:space-x-8">
+      <div className="absolute top-20 sm:top-40 md:top-44 lg:top-36 left-0 right-0 flex flex-col-reverse lg:flex-row items-center lg:items-start justify-center px-4 sm:px-8 md:px-12 lg:px-20 z-10 space-y-10 lg:space-y-0 lg:space-x-8">
         {/* متن و دکمه‌ها */}
         <div className="flex flex-col w-full lg:w-[50%] text-justify px-2 sm:px-4">
           <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center sm:mt-20">
